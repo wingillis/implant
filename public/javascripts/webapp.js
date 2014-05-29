@@ -2,6 +2,9 @@ $(document).foundation();
 
 
 var initialize = function() {
+  var deviceHeight = $(window).height();
+  var mapHeight = deviceHeight * 0.5;
+  $('#map').height(mapHeight);
   var mapOptions = {};
   mapOptions.zoom = 16;
   if (Modernizr.geolocation)
