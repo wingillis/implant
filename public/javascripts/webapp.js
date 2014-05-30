@@ -1,4 +1,11 @@
-$(document).foundation();
+$(document).foundation({
+    slider: {
+        on_change: function() {
+            var val = $('#slider').attr('data-slider');
+
+        }
+    }
+});
 
 var initialize = function() {
   var deviceHeight = $(window).height();
@@ -29,8 +36,6 @@ var initialize = function() {
 //$(document).ready(initialize);
 
 var request = window.superagent;
-
-
 
 
 $('#map-icon').click(function() {
