@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 var debug = require('debug')('implant');
 var app = require('../app');
+//var http = require('http');
 
+//app.set('domain', '0.0.0.0');
 app.set('port', process.env.PORT || 3000);
 
 var server = app.listen(app.get('port'), function() {

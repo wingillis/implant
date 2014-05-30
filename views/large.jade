@@ -1,0 +1,59 @@
+extends layout
+
+block content
+
+  div.top-bar(data-topbar)
+    ul.title-area
+      li.name
+        h1
+          a(rel='My Site')
+            b ImPlant
+      li(class='toggle-topbar menu-icon')
+        a(href='#')
+          span Menu
+    section.top-bar-section
+      ul.left
+        li.divider
+        li
+          a(href='#') About
+        li.divider
+        li: a(href='#') Developers
+      ul.right
+        li: a(href='#', id='home') Home
+        li.active: a(href='#', id='map-icon') Map
+        li.divider
+        li.has-dropdown
+          a Account Options
+          ul.dropdown
+            li: a Sign Up
+            li: a Sign In
+
+  #map
+
+  .row
+    div(class='large-6 small-6 columns upload')
+      a(class='button expand') Upload Photo
+    div(class='large-6 small-6 columns upload')
+      a(class='button expand') Upload Message
+
+
+  footer.row
+    div(class='large-12 columns')
+      hr
+      .row
+        div(class='large-6 columns')
+          p © Copyright symbol because now it looks professional
+        div(class='large-6 columns')
+          ul(class='inline-list right')
+            li: a Link1
+            li: a Link2
+            li: a Link3
+            li: a Link4
+
+  script(src='javascripts/jquery.js')
+  script(src='javascripts/fastclick.js')
+  script(src='javascripts/foundation.min.js')
+  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCqmxx_iYkB1pTQ30Ym6RUJgg0xdelN-wk&sensor=FALSE')
+  script(src='javascripts/webapp.js')
+
+

@@ -1,6 +1,5 @@
 $(document).foundation();
 
-
 var initialize = function() {
   var deviceHeight = $(window).height();
   var mapHeight = deviceHeight * 0.45;
@@ -25,7 +24,7 @@ var initialize = function() {
     } else {
       mapOptions.center = new google.maps.LatLng(-41.2, 72.2);
     }
-}
+};
 
 $(document).ready(initialize);
 
@@ -33,11 +32,9 @@ $(document).ready(initialize);
 $('#map-icon').click(function() {
   $('#map-icon').parent().addClass('active');
   $('#home').parent().removeClass('active');
-  alert('Map was clicked');
 });
 
 $('#home').click(function() {
   $('#home').parent().addClass('active');
   $('#map-icon').parent().removeClass('active');
-  alert('Home was clicked');
 });
