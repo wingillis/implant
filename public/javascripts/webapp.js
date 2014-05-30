@@ -26,7 +26,7 @@ var initialize = function() {
     }
 };
 
-//$(document).ready(initialize);
+$(document).ready(initialize);
 
 var request = window.superagent;
 
