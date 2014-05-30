@@ -26,15 +26,25 @@ var initialize = function() {
     }
 };
 
-$(document).ready(initialize);
+//$(document).ready(initialize);
+
+var request = window.superagent;
+
+
 
 
 $('#map-icon').click(function() {
   $('#map-icon').parent().addClass('active');
   $('#home').parent().removeClass('active');
+  request.get('/data/test', function(response) {
+    alert(response.text);
+  });
 });
 
 $('#home').click(function() {
   $('#home').parent().addClass('active');
   $('#map-icon').parent().removeClass('active');
+  request.post('/data/test', function(response) {
+    alert(response.text);
+  });
 });

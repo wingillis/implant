@@ -10,3 +10,19 @@
 .row {
   max-width: 100%;
 }
+
+.button {
+  background-color: #7D9E00;
+}
+
+.button:hover {
+  background-color: #688500;
+}
+
+.top-bar-section li.active:not(.has-form) a:not(.button) {
+  background: #127806;
+}
+
+.top-bar-section li.active:not(.has-form) a:not(.button):hover {
+  background: #0D5904;
+}
