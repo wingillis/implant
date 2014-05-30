@@ -2,7 +2,7 @@ $(document).foundation();
 
 var initialize = function() {
   var deviceHeight = $(window).height();
-  var mapHeight = deviceHeight * 0.45;
+  var mapHeight = deviceHeight * 0.65;
   $('#map').height(mapHeight);
   var mapOptions = {};
   mapOptions.zoom = 16;
