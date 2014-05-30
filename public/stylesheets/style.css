@@ -26,3 +26,11 @@
 .top-bar-section li.active:not(.has-form) a:not(.button):hover {
   background: #0D5904;
 }
+
+.range-slider.radius .range-slider-handle {
+  background: #7D9E00;
+}
+
+.range-slider.radius .range-slider-handle:hover {
+  background: #688500;
+}

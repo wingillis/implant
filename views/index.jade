@@ -27,6 +27,14 @@ block content
         #map
 
         .row
+          div(class='small-12 columns')
+            div(class='range-slider radius', data-slider, id='slider')
+              span.range-slider-handle
+              span.range-slider-active-segment
+              input(type='hiiden')
+
+
+        .row
           div(class='large-6 small-6 columns upload')
             a(class='button expand') Upload Photo
           div(class='large-6 small-6 columns upload')
@@ -35,17 +43,9 @@ block content
 
         footer.row
           div(class='large-12 columns')
-            .row
-              div(class='large-12 columns')
-                p © Copyright symbol because now it looks professional
+            p © Copyright symbol because now it looks professional
 
     a.exit-off-canvas
 
-  script(src='javascripts/jquery.js')
-  script(src='javascripts/fastclick.js')
-  script(src='javascripts/foundation.min.js')
-  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCqmxx_iYkB1pTQ30Ym6RUJgg0xdelN-wk&sensor=FALSE')
-  script(src='javascripts/superagent.js')
-  script(src='javascripts/webapp.js')
 
 
