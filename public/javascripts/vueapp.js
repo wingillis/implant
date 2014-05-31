@@ -53,7 +53,7 @@ Vue.component('map', {
 Vue.component('seeds', {
     template: '<div class="row">\
     <div class="large-12 small-12 columns">\
-      <ul data-clearing class="clearing-thumbs small-block-grid-5">\
+      <ul data-clearing class="clearing-thumbs small-block-grid-2">\
         <li v-repeat="sidebar"><a href="{{img}}" class="th"><img data-caption="{{header}}" v-attr="src: img"/></a></li>\
       </ul>\
     </div>\
