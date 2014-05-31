@@ -47,7 +47,15 @@ var initialize = function() {
         circle.setRadius(rad);
         radius = rad;
       });
+      request.get('/data/location?lat=' + lo.lat + '&long=' + lo.long)
+  .end(function(msg){
+    if(msg.text == 'Yes')
+    {
+      $('#alert').removeClass('hide');
+    }
+  });
     });
+
   } else {
     alert('Your browser does not support location!');
   }
@@ -73,13 +81,4 @@ $('#photoLink').click(function() {
   $('#photo').click();
 });
 
-$(window).ready(function(){
-  initialize();
-  request.get('/data/location?lat=' + lo.lat + '&long=' + lo.long)
-  .end(function(msg){
-    if(msg.text == 'Yes')
-    {
-      $('#alert').removeClass('hide');
-    }
-  });
-});
+$(document).ready(initialize);
