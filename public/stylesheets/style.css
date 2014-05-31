@@ -3,9 +3,9 @@
 
 }
 
-#map{
+/*#map{
   height: 300px;
-}
+}*/
 
 .row {
   max-width: 100%;
@@ -33,4 +33,9 @@
 
 .range-slider.radius .range-slider-handle:hover {
   background: #688500;
+}
+
+.alert-box {
+  background: #127806;
+  border-color: #0D5904;
 }

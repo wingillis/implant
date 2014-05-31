@@ -13,8 +13,8 @@ block content
       aside.left-off-canvas-menu
         ul.off-canvas-list
           li: label MAIN
-          li: a Map
-          li: a Home
+          li: a#gotoMap Map
+          li: a#gotoSeeds Seeds
           li: label ACCOUNT
           li: a Sign In
           li: a Sign Up
@@ -24,21 +24,42 @@ block content
 
       section.main-section
 
+        .hide#alert
+          .alert-box(data-alert) You have stumbled upon a seed!
+            a.close &times;
+
         #map
 
         .row
-          div(class='small-12 columns')
-            div(class='range-slider radius', data-slider, id='slider')
+          div(class='small-2 columns', style='padding-right:0;')
+            p.text-right(style='padding-top:14px;') Range:
+          div(class='small-10 columns')
+            div(class='range-slider radius', data-slider, data-options='start:0; end: 1000;', id='slider')
               span.range-slider-handle
               span.range-slider-active-segment
-              input(type='hiiden')
+              input(type='hidden')
 
 
         .row
           div(class='large-6 small-6 columns upload')
-            a(class='button expand') Upload Photo
+            a(class='button expand', id='photoLink') Upload Photo
+            .hide
+              form(method='post', action='/data/upload', enctype='multipart/form-data')
+                input(type='file', id='photo', accept='image/*', name='photo')
+                input(type='text', id='formVals', name='formVals')
+                input(type='submit', id='subPhoto')
           div(class='large-6 small-6 columns upload')
-            a(class='button expand') Upload Message
+            a(class='button expand', data-reveal-id='message') Upload Message
+            #message(class='reveal-modal', data-reveal)
+              h3 Message:
+              form(method='post', action'/data/message')
+                textarea(rows=10, id='textMessage', name='message')
+                .hide
+                  input(type='text', id='formVals', name='formVals')
+                  input(type='submit', id='messageSubmit')
+                a(class='button expand', id='sendMessage') Send message!
+              a.close-reveal-modal &#215;
+
 
 
         footer.row
