@@ -3,10 +3,6 @@
 
 }
 
-/*#map{
-  height: 300px;
-}*/
-
 .row {
   max-width: 100%;
 }
@@ -38,4 +34,5 @@
 .alert-box {
   background: #127806;
   border-color: #0D5904;
+  margin: 0;
 }

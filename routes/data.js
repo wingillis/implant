@@ -19,7 +19,7 @@ router.get('/location', function(req, res) {
     }
   }, function(err, result){
     if(err) throw err;
-    if (result == null) {
+    if (result != null) {
       res.send('Yes');
     } else {
       res.send('No');

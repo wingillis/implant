@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+var debug = require('debug')('implant');
+var app = require('../app');
+
+<<<<<<< HEAD
+app.set('domain', '0.0.0.0');
+app.set('port', 80);
+=======
+//app.set('domain', '0.0.0.0');
+app.set('port', process.env.PORT || 3000);
+>>>>>>> f020f029e99bd40f16dfbec880bcfda6a0a2cfbf
+
+var server = app.listen(app.get('port'), function() {
+  console.log('Express server listening on port ' + server.address().port);
+});

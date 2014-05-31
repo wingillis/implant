@@ -10,7 +10,6 @@ var busboy = require('connect-busboy');
 var mongo = require('mongoskin');
 var db = mongo.db('mongodb://wgillis:win@ds033629.mongolab.com:33629/implant');
 
-
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var data = require('./routes/data');
@@ -20,7 +19,6 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
-//app.set('env', 'development');
 
 app.use(favicon());
 app.use(logger('dev'));
