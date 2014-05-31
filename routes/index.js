@@ -14,7 +14,7 @@ router.get('/', function(req, res) {
       res.render('index');
     }
   } else {
-    res.render('large');
+    res.render('index');
   }
 });
 

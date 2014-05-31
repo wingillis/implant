@@ -4,6 +4,12 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var busboy = require('connect-busboy');
+
+// set up database
+var mongo = require('mongoskin');
+var db = mongo.db('mongodb://localhost:27017/implant');
+
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -14,6 +20,7 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+app.set('env', 'development');
 
 app.use(favicon());
 app.use(logger('dev'));
@@ -21,6 +28,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(busboy());
+
+app.use(function(req,res,next) {
+  req.db = db;
+  next();
+});
 
 app.use('/', routes);
 app.use('/users', users);

@@ -2,7 +2,7 @@
 var debug = require('debug')('implant');
 var app = require('../app');
 
-app.set('domain', '0.0.0.0');
+//app.set('domain', '0.0.0.0');
 app.set('port', process.env.PORT || 3000);
 
 var server = app.listen(app.get('port'), function() {
